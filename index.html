@@ -5,142 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Для тебя одной</title>
     <style>
-        /* Стили для всего сайта */
         body {
             font-family: 'Arial', sans-serif;
-            /* Фиолетовый градиентный фон */
-            background: linear-gradient(135deg, #8A2BE2 0%, #9370DB 100%);
-            color: #fff; /* Белый текст для контраста на фиолетовом */
+            background-color: #f8f8f8;
+            color: #333;
             text-align: center;
             padding: 50px;
             line-height: 1.6;
-            min-height: 100vh; /* Чтобы фон занимал всю высоту экрана */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
         }
         .container {
             max-width: 600px;
-            background: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый фон для контейнера */
-            backdrop-filter: blur(10px); /* Эффект размытого стекла */
+            margin: 0 auto;
+            background: white;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #fff;
-            margin-bottom: 30px;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        /* Контейнер для текста с фиксированной высотой, чтобы не прыгал */
-        .text-container {
-            min-height: 300px;
-            text-align: left;
+            color: #e74c3c;
             margin-bottom: 20px;
         }
-        /* Стиль для абзацев */
-        .typewriter {
-            overflow: hidden; /* Скрываем текст за границами */
-            border-right: .15em solid #fff; /* Курсор */
-            white-space: nowrap; /* Текст не переносится */
-            margin: 0 auto 20px auto; /* Центрирование и отступ */
-            letter-spacing: .05em; /* Немного разрядим буквы */
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-            animation-fill-mode: both; /* Чтобы стиль сохранился после анимации */
+        p {
+            margin-bottom: 20px;
+            text-align: left;
         }
-        /* Задержка для каждого последующего абзаца */
-        #text1 { animation-delay: 0s; }
-        #text2 { animation-delay: 3.5s; }
-        #text3 { animation-delay: 7s; }
-        #text4 { animation-delay: 10.5s; width: 100%;} /* Последнему блоку нужна ширина */
-
-        /* Анимация печатания */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        /* Анимация мигания курсора */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #fff; }
-        }
-        /* Стили для кнопки */
         .button {
-            background: rgba(255, 255, 255, 0.25);
+            background-color: #e74c3c;
             color: white;
             padding: 15px 30px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
+            border: none;
             border-radius: 50px;
             cursor: pointer;
             font-size: 16px;
             margin-top: 30px;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
         }
-        /* Эффект при наведении на кнопку */
         .button:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background-color: #c0392b;
         }
-        /* Эффект нажатия (активации) кнопки! */
-        .button:active {
-            transform: scale(0.95); /* Кнопка немного уменьшается */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        /* Стиль для скрытого сообщения */
         #hiddenMessage {
             display: none;
             margin-top: 30px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.25);
+            background-color: #ffeaa7;
             border-radius: 10px;
             font-style: italic;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            text-align: center;
-        }
-        /* Стиль для текста в скрытом сообщении (тоже с анимацией) */
-        #hiddenMessage p {
-            overflow: hidden;
-            border-right: .15em solid #fff;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .05em;
-            animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Мне важно, чтобы ты знала</h1>
+        <p>Я долго обдумывал всё, что произошло, и каждое твоё слово. Ты была абсолютно права. Мое поведение было эгоистичным и слепым. Я не видел, как ты стараешься, и не давал тебе того чувства безопасности, которое заслуживает такая сильная и независимая женщина.</p>
+        <p>Теперь я понимаю, почему ты решила полагаться только на себя. Я сам своими поступками заставил тебя построить эти стены. Мне безумно жаль, что я причинил тебе такую боль.</p>
+        <p>Этот период показал мне, как я был неправ. Настоящая сила не в том, чтобы быть идеальным, а в том, чтобы быть надёжным. Я понял, что любовь — это не громкие слова, а ежедневное доказательство того, что на меня можно положиться.</p>
+        <p>Я не просто прошу прощения словами. Я работаю над собой. Я учусь быть более внимательным, слушать, а не слышать, и делать, а не обещать. Это не быстрый путь, но я на него встал.</p>
 
-        <!-- Контейнер для текста с анимацией печатания -->
-        <div class="text-container">
-            <p class="typewriter" id="text1">Я долго обдумывал всё, что произошло, и каждое твоё слово.</p>
-            <p class="typewriter" id="text2">Ты была абсолютно права. Моё поведение было эгоистичным и слепым.</p>
-            <p class="typewriter" id="text3">Я не видел, как ты стараешься, и не давал тебе чувства безопасности.</p>
-            <p class="typewriter" id="text4">Мне безумно жаль, что я причинил тебе такую боль.</p>
-        </div>
-
-        <!-- Кнопка -->
         <button class="button" onclick="showMessage()">Ты всё ещё веришь в чудеса?</button>
-
-        <!-- Скрытое сообщение, которое появится после нажатия -->
         <div id="hiddenMessage">
-            <p>Я люблю тебя сильнее всего на свете. И я буду каждый день доказывать, что на меня можно положиться.</p>
+            <p>Я могу и не быть идеальным. Но в одном я уверен абсолютно: я люблю тебя сильнее всего на свете. И я буду каждый день доказывать, что за мной — как за этой кнопкой — всегда есть то, что не сломается. Твоя любовь — мой главный двигатель. Спасибо, что есть ты.</p>
         </div>
     </div>
 
     <script>
         function showMessage() {
-            // Показываем скрытое сообщение
-            let message = document.getElementById('hiddenMessage');
-            message.style.display = 'block';
-
-            // Опционально: можно прокрутить страницу к сообщению
-            message.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('hiddenMessage').style.display = 'block';
         }
     </script>
 </body>
