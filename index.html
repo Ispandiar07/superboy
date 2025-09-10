@@ -36,9 +36,8 @@
         .text-container {
             text-align: left;
             margin-bottom: 20px;
-            min-height: 320px;
+            min-height: 220px;
         }
-        /* НОВЫЙ СТИЛЬ ДЛЯ МНОГОСТРОЧНОГО ТЕКСТА */
         .typewriter-line {
             overflow: hidden;
             margin-bottom: 15px;
@@ -50,20 +49,14 @@
             opacity: 0;
             animation: fadeIn 0.1s forwards;
         }
-        /* Анимация появления текста */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        /* Задержки для каждой строки */
         .line-1 { animation-delay: 0.5s; }
-        .line-2 { animation-delay: 3s; }
-        .line-3 { animation-delay: 6s; }
-        .line-4 { animation-delay: 9s; }
-        .line-5 { animation-delay: 12s; }
-        .line-6 { animation-delay: 15s; }
-        .line-7 { animation-delay: 18s; }
-        .line-8 { animation-delay: 21s; }
+        .line-2 { animation-delay: 2.5s; }
+        .line-3 { animation-delay: 5s; }
+        .line-4 { animation-delay: 7s; }
         
         .button {
             background: rgba(255, 255, 255, 0.25);
@@ -73,11 +66,11 @@
             border-radius: 50px;
             cursor: pointer;
             font-size: 18px;
-            margin-top: 20px;
+            margin: 20px 0;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            white-space: normal; /* Разрешаем перенос текста на кнопке */
-            word-break: break-word; /* Перенос длинных слов */
+            white-space: normal;
+            word-break: break-word;
             max-width: 100%;
         }
         .button:hover {
@@ -89,9 +82,23 @@
             transform: scale(0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
+        
+        /* Стиль для красивого текста под кнопкой */
+        .love-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 25px 0 15px 0;
+            padding: 0 10px;
+            font-style: italic;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 9s; /* Появится после всей анимации */
+        }
+        
         #hiddenMessage {
             display: none;
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.25);
             border-radius: 10px;
@@ -112,38 +119,32 @@
         <h1>Мне важно, чтобы ты знала</h1>
 
         <div class="text-container">
-            <!-- Разбиваем текст на отдельные строки -->
             <div class="typewriter-line">
-                <div class="typewriter-text line-1">Я долго обдумывал всё, что произошло, и каждое твоё слово.</div>
+                <div class="typewriter-text line-1">Я был слепым и эгоистичным.</div>
             </div>
             <div class="typewriter-line">
-                <div class="typewriter-text line-2">Ты была абсолютно права. Мое поведение было эгоистичным и слепым.</div>
+                <div class="typewriter-text line-2">Мне бесконечно жаль за ту боль, что я причинил.</div>
             </div>
             <div class="typewriter-line">
-                <div class="typewriter-text line-3">Я не видел, как ты стараешься, и не давал тебе того чувства безопасности,</div>
+                <div class="typewriter-text line-3">Я не оправдываюсь. Я был неправ.</div>
             </div>
             <div class="typewriter-line">
-                <div class="typewriter-text line-4">которое заслуживает такая сильная и независимая женщина.</div>
-            </div>
-            <div class="typewriter-line">
-                <div class="typewriter-text line-5">Теперь я понимаю, почему ты решила полагаться только на себя.</div>
-            </div>
-            <div class="typewriter-line">
-                <div class="typewriter-text line-6">Я сам своими поступками заставил тебя построить эти стены.</div>
-            </div>
-            <div class="typewriter-line">
-                <div class="typewriter-text line-7">Мне безумно жаль, что я причинил тебе такую боль.</div>
-            </div>
-            <div class="typewriter-line">
-                <div class="typewriter-text line-8">Я понял, что любовь — это не громкие слова, а ежедневное доказательство того, что на меня можно положиться.</div>
+                <div class="typewriter-text line-4">Но я хочу, чтобы ты знала одно...</div>
             </div>
         </div>
 
         <button class="button" onclick="showMessage()">Ты всё ещё веришь в чудеса?</button>
+        
+        <!-- Твой красивый текст под кнопкой -->
+        <div class="love-text">
+            Каждый день, проведённый с тобой, — это подарок, и я не перестаю благодарить судьбу за то, что ты появилась в моей жизни. Ты — моя родственная душа, моё сердце, моя любовь. И я буду любить тебя всегда.
+        </div>
 
         <div id="hiddenMessage">
             <div class="hidden-text">
-                Я могу и не быть идеальным. Но в одном я уверен абсолютно: я люблю тебя сильнее всего на свете. И я буду каждый день доказывать, что за мной — как за этой кнопкой — всегда есть то, что не сломается. Твоя любовь — мой главный двигатель. Спасибо, что есть ты.
+                Я люблю тебя больше всего на свете. Эти слова для меня — не просто звук. 
+                Это причина, по которой я готов меняться. 
+                Ты — мой самый важный человек, и я буду бороться за нас до конца.
             </div>
         </div>
     </div>
