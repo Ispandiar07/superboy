@@ -19,7 +19,7 @@
             margin: 0;
         }
         .container {
-            max-width: 650px; /* Чуть шире для большего текста */
+            max-width: 600px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             padding: 30px;
@@ -36,31 +36,35 @@
         .text-container {
             text-align: left;
             margin-bottom: 20px;
-            min-height: 380px; /* Увеличил высоту под больший текст */
+            min-height: 320px;
         }
-        .typewriter {
-            font-size: 18px; /* Normal readable size */
+        /* НОВЫЙ СТИЛЬ ДЛЯ МНОГОСТРОЧНОГО ТЕКСТА */
+        .typewriter-line {
             overflow: hidden;
-            border-right: .15em solid #fff;
-            white-space: nowrap;
-            margin: 0 auto 20px auto;
-            letter-spacing: .05em;
-            animation: typing 4.5s steps(60, end), blink-caret .75s step-end infinite;
-            animation-fill-mode: both;
+            margin-bottom: 15px;
+            position: relative;
         }
-        /* Разная задержка для каждого параграфа */
-        #text1 { animation-delay: 0s; }
-        #text2 { animation-delay: 5s; }
-        #text3 { animation-delay: 11s; }
-        #text4 { animation-delay: 18s; width: 100%; }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+        .typewriter-text {
+            display: inline-block;
+            font-size: 18px;
+            opacity: 0;
+            animation: fadeIn 0.1s forwards;
         }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #fff; }
+        /* Анимация появления текста */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
+        /* Задержки для каждой строки */
+        .line-1 { animation-delay: 0.5s; }
+        .line-2 { animation-delay: 3s; }
+        .line-3 { animation-delay: 6s; }
+        .line-4 { animation-delay: 9s; }
+        .line-5 { animation-delay: 12s; }
+        .line-6 { animation-delay: 15s; }
+        .line-7 { animation-delay: 18s; }
+        .line-8 { animation-delay: 21s; }
+        
         .button {
             background: rgba(255, 255, 255, 0.25);
             color: white;
@@ -69,9 +73,12 @@
             border-radius: 50px;
             cursor: pointer;
             font-size: 18px;
-            margin-top: 30px;
+            margin-top: 20px;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            white-space: normal; /* Разрешаем перенос текста на кнопке */
+            word-break: break-word; /* Перенос длинных слов */
+            max-width: 100%;
         }
         .button:hover {
             background: rgba(255, 255, 255, 0.4);
@@ -92,14 +99,11 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             text-align: center;
         }
-        #hiddenMessage p {
+        .hidden-text {
             font-size: 18px;
-            overflow: hidden;
-            border-right: .15em solid #fff;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .05em;
-            animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.5s;
         }
     </style>
 </head>
@@ -108,17 +112,39 @@
         <h1>Мне важно, чтобы ты знала</h1>
 
         <div class="text-container">
-            <!-- ПОЛНЫЙ ТЕКСТ, КОТОРЫЙ ТЫ ХОТЕЛ -->
-            <p class="typewriter" id="text1">Я долго обдумывал всё, что произошло, и каждое твоё слово. Ты была абсолютно права. Мое поведение было эгоистичным и слепым.</p>
-            <p class="typewriter" id="text2">Я не видел, как ты стараешься, и не давал тебе того чувства безопасности, которое заслуживает такая сильная и независимая женщина.</p>
-            <p class="typewriter" id="text3">Теперь я понимаю, почему ты решила полагаться только на себя. Я сам своими поступками заставил тебя построить эти стены. Мне безумно жаль, что я причинил тебе такую боль.</p>
-            <p class="typewriter" id="text4">Этот период показал мне, как я был неправ. Настоящая сила не в том, чтобы быть идеальным, а в том, чтобы быть надёжным. Я понял, что любовь — это не громкие слова, а ежедневное доказательство того, что на меня можно положиться.</p>
+            <!-- Разбиваем текст на отдельные строки -->
+            <div class="typewriter-line">
+                <div class="typewriter-text line-1">Я долго обдумывал всё, что произошло, и каждое твоё слово.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-2">Ты была абсолютно права. Мое поведение было эгоистичным и слепым.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-3">Я не видел, как ты стараешься, и не давал тебе того чувства безопасности,</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-4">которое заслуживает такая сильная и независимая женщина.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-5">Теперь я понимаю, почему ты решила полагаться только на себя.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-6">Я сам своими поступками заставил тебя построить эти стены.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-7">Мне безумно жаль, что я причинил тебе такую боль.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-8">Я понял, что любовь — это не громкие слова, а ежедневное доказательство того, что на меня можно положиться.</div>
+            </div>
         </div>
 
         <button class="button" onclick="showMessage()">Ты всё ещё веришь в чудеса?</button>
 
         <div id="hiddenMessage">
-            <p>Я могу и не быть идеальным. Но в одном я уверен абсолютно: я люблю тебя сильнее всего на свете. И я буду каждый день доказывать, что за мной — как за этой кнопкой — всегда есть то, что не сломается. Твоя любовь — мой главный двигатель. Спасибо, что есть ты.</p>
+            <div class="hidden-text">
+                Я могу и не быть идеальным. Но в одном я уверен абсолютно: я люблю тебя сильнее всего на свете. И я буду каждый день доказывать, что за мной — как за этой кнопкой — всегда есть то, что не сломается. Твоя любовь — мой главный двигатель. Спасибо, что есть ты.
+            </div>
         </div>
     </div>
 
