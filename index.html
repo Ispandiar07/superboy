@@ -36,7 +36,7 @@
         .text-container {
             text-align: left;
             margin-bottom: 20px;
-            min-height: 220px;
+            min-height: 320px;
         }
         .typewriter-line {
             overflow: hidden;
@@ -53,10 +53,14 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        /* Задержки для основного текста */
         .line-1 { animation-delay: 0.5s; }
         .line-2 { animation-delay: 2.5s; }
         .line-3 { animation-delay: 5s; }
         .line-4 { animation-delay: 7s; }
+        .line-5 { animation-delay: 9s; }
+        .line-6 { animation-delay: 12s; }
+        .line-7 { animation-delay: 15s; }
         
         .button {
             background: rgba(255, 255, 255, 0.25);
@@ -69,9 +73,6 @@
             margin: 20px 0;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            white-space: normal;
-            word-break: break-word;
-            max-width: 100%;
         }
         .button:hover {
             background: rgba(255, 255, 255, 0.4);
@@ -83,34 +84,19 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
-        /* Стиль для красивого текста под кнопкой */
-        .love-text {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 25px 0 15px 0;
-            padding: 0 10px;
-            font-style: italic;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
-            animation-delay: 9s;
-        }
-        
         #hiddenMessage {
             display: none;
             margin-top: 20px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.25);
             border-radius: 10px;
-            font-style: italic;
             border: 1px solid rgba(255, 255, 255, 0.3);
             text-align: center;
         }
         .hidden-text {
             font-size: 18px;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-            animation-delay: 0.5s;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -119,6 +105,7 @@
         <h1>Мне важно, чтобы ты знала</h1>
 
         <div class="text-container">
+            <!-- Основной текст который печатается -->
             <div class="typewriter-line">
                 <div class="typewriter-text line-1">Я был слепым и эгоистичным.</div>
             </div>
@@ -131,20 +118,26 @@
             <div class="typewriter-line">
                 <div class="typewriter-text line-4">Но я хочу, чтобы ты знала одно...</div>
             </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-5">Я люблю тебя больше всего на свете.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-6">Эти слова для меня — не просто звук.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-7">Это причина, по которой я готов меняться.</div>
+            </div>
+            <div class="typewriter-line">
+                <div class="typewriter-text line-8">Ты — мой самый важный человек, и я буду бороться за нас до конца.</div>
+            </div>
         </div>
 
         <button class="button" onclick="showMessage()">Ты всё ещё веришь в чудеса?</button>
-        
-        <!-- Твой красивый текст под кнопкой -->
-        <div class="love-text">
-            Каждый день, проведённый с тобой, — это подарок, и я не перестаю благодарить судьбу за то, что ты появилась в моей жизни. Ты — моя родственная душа, моё сердце, моя любовь. И я буду любить тебя всегда.
-        </div>
 
+        <!-- Текст который появляется ПОСЛЕ нажатия кнопки -->
         <div id="hiddenMessage">
             <div class="hidden-text">
-                Я люблю тебя больше всего на свете. Эти слова для меня — не просто звук. 
-                Это причина, по которой я готов меняться. 
-                Ты — мой самый важный человек, и я буду бороться за нас до конца.
+                Каждый день, проведённый с тобой, — это подарок, и я не перестаю благодарить судьбу за то, что ты появилась в моей жизни. Ты — моя родственная душа, моё сердце, моя любовь. И я буду любить тебя всегда.
             </div>
         </div>
     </div>
